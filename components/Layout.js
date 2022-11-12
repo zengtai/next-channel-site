@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 export default function Layout({ navItems, children }) {
   return (
-    <div className="wrapper flex min-h-screen flex-col">
+    <div className="wrapper">
       <Navbar items={navItems} />
       <main>{children}</main>
       <Footer />

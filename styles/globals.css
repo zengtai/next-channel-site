@@ -12,6 +12,7 @@
 
 /* Layout */
 .wrapper {
+  @apply flex min-h-screen flex-col space-y-4 text-blue-200 text-sm;
 }
 
 /* Navbar */
@@ -32,7 +33,7 @@
 }
 /* Footer */
 .site-footer {
-  @apply p-4 text-center;
+  @apply p-4 text-center bg-blue-900;
 }
 /* Components */
 .game-list {
@@ -69,7 +70,7 @@
 
 /* Category */
 .page-title {
-  @apply my-2 text-center text-2xl font-bold;
+  @apply my-2 text-center text-2xl font-bold text-white;
   span {
     @apply text-sm;
   }
