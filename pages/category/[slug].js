@@ -4,7 +4,12 @@ import Banner from "../../components/Banner";
 import GameList from "../../components/GameList";
 import Layout from "../../components/Layout";
 import { getData } from "../../lib/api";
-import { SITE_META, ADS_SLOT_ID, ADSENSE_ID } from "../../lib/constants";
+import {
+  SITE_META,
+  ADS_SLOT_ID,
+  ADSENSE_ID,
+  TOP_GAMES,
+} from "../../lib/constants";
 
 export default function Category({ data }) {
   // console.log(`data: `, data);
@@ -46,6 +51,12 @@ export const getStaticProps = async (ctx) => {
   }
   let filteredGames = games.filter(
     (game) => toSlug(game.category) === ctx.params.slug
+  );
+
+  let topgames = TOP_GAMES.map((i) => i.appid);
+
+  filteredGames.sort((a, b) =>
+    topgames.indexOf(a.appid) < topgames.indexOf(b.appid) ? 1 : -1
   );
   const categories = await getData("category");
 

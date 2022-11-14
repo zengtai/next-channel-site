@@ -89,6 +89,7 @@ export const getStaticProps = async (ctx) => {
   let topgames = TOP_GAMES.map((i) => i.appid);
   const related = games
     .filter((i) => i.slug !== ctx.params.slug && topgames.includes(i.appid))
+    .reverse()
     .slice(0, 6);
   return {
     props: {
