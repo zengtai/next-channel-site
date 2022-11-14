@@ -79,7 +79,15 @@
   }
 }
 /* Detail */
-
+.description {
+  @apply relative m-4 overflow-hidden rounded-md bg-blue-600 after:absolute after:bottom-0 after:left-0 after:h-8 after:w-full after:bg-gradient-to-t after:from-blue-600;
+  .t {
+    @apply m-2 border-b border-blue-700 py-2 font-bold uppercase;
+  }
+  .c {
+    @apply m-3 h-28 mb-6 overflow-y-auto;
+  }
+}
 /* Banner */
 .banner {
   .t {

@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
@@ -17,6 +18,9 @@ import {
 export default function GameDetail({ data }) {
   return (
     <>
+      <Head>
+        <title>{data.currentGame.title}</title>
+      </Head>
       <Script
         id={`gads-init`}
         async
@@ -65,16 +69,12 @@ export default function GameDetail({ data }) {
               Play Now
             </Link>
           </div>
-          <div className="relative m-4 overflow-hidden rounded-md bg-blue-600 after:absolute after:bottom-0 after:left-0 after:h-8 after:w-full after:bg-gradient-to-t after:from-blue-600">
-            <div className="m-3 h-28">
-              <div className="mb-2 border-b border-blue-700 pb-2 font-bold uppercase">
-                About this game
-              </div>
-              {data.currentGame.description}
-            </div>
+          <div className="description">
+            <div className="t">About this game</div>
+            <div className="c">{data.currentGame.description}</div>
           </div>
           <div>
-            <GameList items={data.related} />
+            <GameList items={data.related} slot={ADS_SLOT_ID.DETAIL} />
           </div>
         </div>
       </Layout>

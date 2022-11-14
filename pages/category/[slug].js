@@ -37,7 +37,7 @@ export default function Category({ data }) {
             />
             <span>{`Total: ${data.games.length}`}</span>
           </header>
-          <GameList items={data.games} />
+          <GameList items={data.games} slot={ADS_SLOT_ID.CATEGORY} />
         </div>
       </Layout>
     </>
