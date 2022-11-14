@@ -30,6 +30,7 @@ export default function Home({ data }) {
       <Layout navItems={data.categories}>
         <div className="home container mx-auto">
           <Banner slot={ADS_SLOT_ID.HOME} auto />
+          <h2 className="sr-only">All Games</h2>
           <GameList items={data.games} />
         </div>
       </Layout>

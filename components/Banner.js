@@ -49,7 +49,7 @@ export default function Banner({
               : style
           }
           data-ad-layout={layout}
-          data-ad-format={auto ? `auto` : format}
+          data-ad-format={format ? format : `auto`}
           data-ad-client={client}
           data-ad-slot={slot}
           data-ad-layout-key={layoutKey}

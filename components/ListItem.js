@@ -16,7 +16,7 @@ export default function ListItem({ item }) {
             height={100}
           />
           <div className="meta">
-            <div className="t">{item.title}</div>
+            <h3 className="t">{item.title}</h3>
             <div className="i">
               <div className="r">{item.rating}</div>
               <span className="p">{item.played}</span>
