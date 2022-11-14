@@ -5,6 +5,7 @@ import * as gtag from "../lib/gtag";
 import NProgress from "nprogress";
 import "../styles/globals.css";
 import "../styles/nprogress.css";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -38,6 +39,26 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <Head>
+        <link
+          rel="icon"
+          href={`${router.basePath}/favicon.ico`}
+          sizes="16x16"
+          type="image/x-icon"
+        />
+        <link
+          rel="icon"
+          href={`${router.basePath}/favicon.png`}
+          sizes="16x16 32x32 64x64"
+          type="image/png"
+        />
+        <link
+          rel="icon"
+          href={`${router.basePath}/favicon.svg`}
+          sizes="any"
+          type="image/svg+xml"
+        />
+      </Head>
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_ID}`}

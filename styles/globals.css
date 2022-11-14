@@ -6,41 +6,44 @@
 @layer base {
   html,
   body {
-    @apply bg-blue-700 text-blue-50;
+    @apply bg-blue-800 text-blue-50;
   }
 }
 
 /* Layout */
 .wrapper {
-  @apply flex min-h-screen flex-col space-y-4 text-blue-200 text-sm;
+  @apply flex min-h-screen flex-col space-y-4 bg-blue-700 text-sm text-blue-200;
 }
 
 /* Navbar */
 .navbar {
-  @apply relative w-full after:absolute after:right-0 after:top-0 after:z-0 after:h-full after:w-8 after:bg-gradient-to-l after:from-blue-700;
+  @apply fixed top-0 left-0 z-10 w-full bg-blue-700 shadow-lg after:absolute after:right-0 after:top-0 after:z-0 after:h-full after:w-8 after:bg-gradient-to-l after:from-blue-700;
   .container {
     @apply mx-auto overflow-x-auto;
   }
 }
 .navbar-list {
-  @apply m-4 flex flex-nowrap pr-4 last:mr-4 lg:justify-center;
+  @apply relative m-4 flex snap-x snap-mandatory flex-nowrap pr-4 last:mr-4 lg:justify-center;
   li {
-    @apply pr-4 last:pr-8;
+    @apply snap-center pr-4 last:pr-8;
+  }
+  .current a {
+    @apply text-blue-50 ring-2 ring-blue-300;
   }
 }
 .navbar-list a {
-  @apply block whitespace-nowrap rounded-md bg-blue-500 py-2 px-4;
+  @apply block whitespace-nowrap rounded-md bg-gradient-to-br from-blue-500 to-blue-600 py-2 px-4;
 }
 /* Footer */
 .site-footer {
-  @apply p-4 text-center bg-blue-900;
+  @apply bg-blue-800 p-4 text-center text-blue-400;
 }
 /* Components */
 .game-list {
   @apply grid lg:grid-cols-5;
 }
 .list-item {
-  @apply mx-4 my-2;
+  @apply mx-4 my-2 xl:transform xl:duration-500 xl:ease-in-out xl:hover:scale-110;
   a {
     @apply flex space-x-2 overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg;
   }
@@ -48,7 +51,7 @@
     @apply mt-2 grow overflow-hidden text-ellipsis pb-2 pr-2 text-left text-sm leading-tight drop-shadow-md;
   }
   .t {
-    @apply mb-2 font-bold;
+    @apply mb-2 font-bold text-blue-50;
   }
   .i {
     @apply my-2;
@@ -82,4 +85,7 @@
   .t {
     @apply text-center text-xs uppercase;
   }
+}
+.adsbygoogle {
+  @apply mx-auto w-full bg-black/5;
 }
