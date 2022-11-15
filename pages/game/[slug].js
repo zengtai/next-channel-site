@@ -16,6 +16,7 @@ import {
 } from "../../lib/constants";
 
 export default function GameDetail({ data }) {
+  console.log(`data: `, data.slugs.join(`,`));
   return (
     <>
       <Head>
@@ -91,9 +92,11 @@ export const getStaticProps = async (ctx) => {
     .filter((i) => i.slug !== ctx.params.slug && topgames.includes(i.appid))
     .reverse()
     .slice(0, 6);
+
+  const slugs = games.map((i) => i.slug);
   return {
     props: {
-      data: { categories, currentGame, related },
+      data: { categories, currentGame, related, slugs },
     },
   };
 };

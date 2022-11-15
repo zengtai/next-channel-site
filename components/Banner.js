@@ -54,7 +54,9 @@ export default function Banner({
           data-ad-slot={slot}
           data-ad-layout-key={layoutKey}
           data-full-width-responsive={auto ? `true` : responsive}
-          {...(DEV_MODE === true ? { "data-adtest": "on" } : null)}
+          {...(DEV_MODE === true || process.env.NODE_ENV === "development"
+            ? { "data-adtest": "on" }
+            : null)}
         />
         <Script
           id={Math.random()}
