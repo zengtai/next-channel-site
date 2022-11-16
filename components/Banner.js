@@ -13,25 +13,25 @@ export default function Banner({
   layoutKey,
   auto,
 }) {
-  useEffect(() => {
-    try {
-      // let adsbygoogle = window.adsbygoogle || [];
-      // adsbygoogle.push({});
-      let scripts = document.querySelectorAll(`.ad_`);
-      // console.log(`1 scripts:`, scripts);
-      for (let i of scripts) {
-        // console.log(i);
-        i.parentNode.removeChild(i);
-      }
-      // let ads = scripts.filter((i) =>
-      //   i.getAttributeNode("id").value.match(/ad_/g)
-      // );
-      // console.log(ads);
-      // console.log(`2 scripts:`, scripts);
-    } catch (e) {
-      console.error(e);
-    }
-  }, []);
+  // useEffect(() => {
+  //   try {
+  //     // let adsbygoogle = window.adsbygoogle || [];
+  //     // adsbygoogle.push({});
+  //     let scripts = document.querySelectorAll(`.ad_`);
+  //     // console.log(`1 scripts:`, scripts);
+  //     for (let i of scripts) {
+  //       // console.log(i);
+  //       i.parentNode.removeChild(i);
+  //     }
+  //     // let ads = scripts.filter((i) =>
+  //     //   i.getAttributeNode("id").value.match(/ad_/g)
+  //     // );
+  //     // console.log(ads);
+  //     // console.log(`2 scripts:`, scripts);
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // }, []);
 
   return (
     <div className="banner">
@@ -54,7 +54,9 @@ export default function Banner({
           data-ad-slot={slot}
           data-ad-layout-key={layoutKey}
           data-full-width-responsive={auto ? `true` : responsive}
-          {...(DEV_MODE === true ? { "data-adtest": "on" } : null)}
+          {...(process.env.NODE_ENV === "development" || DEV_MODE === true
+            ? { "data-adtest": "on" }
+            : null)}
         />
         <Script
           id={Math.random()}
