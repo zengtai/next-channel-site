@@ -10,6 +10,9 @@ module.exports = {
         arrow: "url(../public/images/arrow.svg)",
         star: "url(../public/images/star.svg)",
       },
+      animation: {
+        "spin-fast": "spin 400ms linear infinite",
+      },
     },
   },
   plugins: [],

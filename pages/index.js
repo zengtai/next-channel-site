@@ -55,7 +55,7 @@ export const getStaticProps = async (ctx) => {
   });
   let topgames = [];
   TOP_GAMES.forEach((i) => (topgames[i.order - 1] = i.appid));
-  console.log("topgames: ", topgames);
+  // console.log("topgames: ", topgames);
   // games.sort((a, b) =>
   //   topgames.indexOf(a.appid) < topgames.indexOf(b.appid) ? 1 : -1
   // );
@@ -69,7 +69,7 @@ export const getStaticProps = async (ctx) => {
   }
 
   Top15Games.sort((a, b) => Top15Order(a, b));
-  console.log(`Top15Games: `, Top15Games);
+  // console.log(`Top15Games: `, Top15Games);
   const OtherGames = games.filter((i) => !topgames.includes(i.appid));
 
   return {

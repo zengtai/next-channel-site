@@ -89,3 +89,11 @@
 .adsbygoogle {
   @apply mx-auto w-full bg-black/5;
 }
+.list-banner .adsbygoogle {
+  @apply bg-transparent;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  @apply w-4 h-4 border-2 border-y-white border-l-white border-r-transparent rounded-full animate-spin-fast;
+}

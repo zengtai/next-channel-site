@@ -14,6 +14,8 @@ export default function ListItem({ item }) {
             alt={item.title}
             width={100}
             height={100}
+            placeholder={`blur`}
+            blurDataURL={`data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==`}
           />
           <div className="meta">
             <h3 className="t">{item.title}</h3>

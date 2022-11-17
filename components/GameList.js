@@ -27,8 +27,11 @@ export default function GameList({ items, className, slot, page }) {
       next={loadMore}
       hasMore={isHasMore}
       loader={
-        <p className="text-center my-2">
-          Loading... {`(${data.length} / ${items.length})`}
+        <p className="flex justify-center space-x-2 my-2" onClick={loadMore}>
+          {/* <span className="bg-spinner bg-no-repeat bg-left bg-contain pl-6"> */}
+          <div className="loading-spinner"></div>
+          <span>Loading... {`(${data.length} / ${items.length})`}</span>
+          {/* </span> */}
         </p>
       }
       endMessage={
@@ -40,7 +43,7 @@ export default function GameList({ items, className, slot, page }) {
           ...(index > 5 && index % 6 === 0 ? (
             <Fragment key={i.slug}>
               <ListItem item={i} />
-              <li>
+              <li className="list-banner">
                 {/* <Banner slot={slot} auto key={`${page}-${index}`} /> */}
                 <Banner
                   auto
@@ -48,8 +51,9 @@ export default function GameList({ items, className, slot, page }) {
                   // slot={slot}
                   format={`fluid`}
                   style={{ display: `block` }}
+                  layoutKey={`-h5+2+1c-ar+gt`}
                   // layoutKey={`-hl-w+1e-4e+b7`}
-                  layoutKey={`-h4+u-2d-e0+y6`}
+                  // layoutKey={`-h4+u-2d-e0+y6`}
                   key={`${page}-${index}`}
                 />
               </li>

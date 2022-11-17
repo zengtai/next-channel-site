@@ -3,8 +3,8 @@ import { useRouter } from "next/router";
 
 export default function Navbar({ items }) {
   const router = useRouter();
-  console.log(`asPath`, router.asPath);
-  console.log(`pathname`, router.pathname);
+  // console.log(`asPath`, router.asPath);
+  // console.log(`pathname`, router.pathname);
   const path = router.asPath;
   const query = router.pathname;
   function toSlug(category) {
