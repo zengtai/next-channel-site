@@ -6,7 +6,7 @@ export default function ListItem({ item }) {
   return (
     <>
       <li className="list-item">
-        <Link href={`${GAME_PATH + item.appid}`} title={item.title}>
+        <Link href={`/game/${item.slug}`} title={item.title}>
           <Image
             src={
               IMAGE_PATH + IMAGE_FORMAT + `/` + item.appid + `.` + IMAGE_FORMAT

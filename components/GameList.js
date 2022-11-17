@@ -27,12 +27,12 @@ export default function GameList({ items, className, slot, page }) {
       next={loadMore}
       hasMore={isHasMore}
       loader={
-        <p className="flex justify-center space-x-2 my-2" onClick={loadMore}>
+        <div className="flex justify-center space-x-2 my-2" onClick={loadMore}>
           {/* <span className="bg-spinner bg-no-repeat bg-left bg-contain pl-6"> */}
           <div className="loading-spinner"></div>
-          <span>Loading... {`(${data.length} / ${items.length})`}</span>
+          <p>Loading... {`(${data.length} / ${items.length})`}</p>
           {/* </span> */}
-        </p>
+        </div>
       }
       endMessage={
         <p className="text-center mt-4 opacity-50">- No more games. -</p>
