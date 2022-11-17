@@ -8,9 +8,9 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === "development" ? false : true,
   },
-  basePath: `/abgame`,
+  // basePath: `/abgame`,
   // basePath: `/webs_test/20221116/abgame`, // test
-  // basePath: `/webs/abgame`, // test2
+  basePath: `/webs/abgame`, // test2
   trailingSlash: true,
   generateBuildId: async () => {
     // You can, for example, get the latest git commit hash here
