@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Script from "next/script";
 import Banner from "../../components/Banner";
 import GameList from "../../components/GameList";
 import Layout from "../../components/Layout";
@@ -39,6 +38,7 @@ export default function Category({ data }) {
             key={data.games[0].category}
             items={data.games}
             slot={ADS_SLOT_ID.CATEGORY}
+            page={Math.random().toFixed(6)}
           />
         </div>
       </Layout>

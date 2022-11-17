@@ -3,7 +3,7 @@ import Banner from "./Banner";
 import ListItem from "./ListItem";
 import InfiniteScroll from "react-infinite-scroll-component";
 
-export default function GameList({ items, className, slot }) {
+export default function GameList({ items, className, slot, page }) {
   const step = 6; // 增量
   const init = items.slice(0, step);
   const [isHasMore, setIsHasMore] = useState(true);
@@ -40,7 +40,9 @@ export default function GameList({ items, className, slot }) {
           ...(index > 5 && index % 6 === 0 ? (
             <Fragment key={i.slug}>
               <ListItem item={i} />
-              <Banner slot={slot} auto key={Math.random()} />
+              <li>
+                <Banner slot={slot} auto key={`${page}-${index}`} />
+              </li>
             </Fragment>
           ) : (
             <ListItem key={i.slug} item={i} />

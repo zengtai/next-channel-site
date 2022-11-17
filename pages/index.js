@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Script from "next/script";
 import Banner from "../components/Banner";
 import GameList from "../components/GameList";
 import Layout from "../components/Layout";
@@ -29,7 +28,11 @@ export default function Home({ data }) {
         <div className="home container mx-auto">
           <Banner slot={ADS_SLOT_ID.HOME} auto key={Math.random()} />
           <h2 className="sr-only">All Games</h2>
-          <GameList items={data.games} slot={ADS_SLOT_ID.HOME} />
+          <GameList
+            items={data.games}
+            slot={ADS_SLOT_ID.HOME}
+            page={Math.random().toFixed(6)}
+          />
         </div>
       </Layout>
     </>
