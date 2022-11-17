@@ -35,7 +35,7 @@ export default function Banner({
 
   return (
     <div className="banner">
-      <div className="t">Advertisement</div>
+      {format === `fluid` ? null : <div className="t">Advertisement</div>}
       <div className={className ? className + ` text-center` : `text-center`}>
         <ins
           className={`adsbygoogle`}

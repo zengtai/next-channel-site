@@ -41,7 +41,17 @@ export default function GameList({ items, className, slot, page }) {
             <Fragment key={i.slug}>
               <ListItem item={i} />
               <li>
-                <Banner slot={slot} auto key={`${page}-${index}`} />
+                {/* <Banner slot={slot} auto key={`${page}-${index}`} /> */}
+                <Banner
+                  auto
+                  slot={`4544472056`}
+                  // slot={slot}
+                  format={`fluid`}
+                  style={{ display: `block` }}
+                  // layoutKey={`-hl-w+1e-4e+b7`}
+                  layoutKey={`-h4+u-2d-e0+y6`}
+                  key={`${page}-${index}`}
+                />
               </li>
             </Fragment>
           ) : (
