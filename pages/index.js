@@ -37,8 +37,19 @@ export default function Home({ data }) {
 }
 
 export const getStaticProps = async (ctx) => {
-  const games = await getData(`games`);
+  const originData = await getData(`games`);
   const categories = await getData("category");
+  let games = [];
+  originData.map((i) => {
+    games.push({
+      appid: i.appid,
+      title: i.title,
+      slug: i.slug,
+      rating: i.rating,
+      played: i.played,
+      category: i.category,
+    });
+  });
   let topgames = [];
   TOP_GAMES.forEach((i) => (topgames[i.order - 1] = i.appid));
   console.log("topgames: ", topgames);
