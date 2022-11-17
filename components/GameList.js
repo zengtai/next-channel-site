@@ -28,7 +28,7 @@ export default function GameList({ items, className, slot }) {
       hasMore={isHasMore}
       loader={
         <p className="text-center my-2">
-          Loading..{`${data.length} / ${items.length}`}
+          Loading... {`(${data.length} / ${items.length})`}
         </p>
       }
       endMessage={
