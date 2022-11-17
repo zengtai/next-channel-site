@@ -6,7 +6,7 @@ export default function Navbar({ items }) {
   // console.log(`asPath`, router.asPath);
   // console.log(`pathname`, router.pathname);
   const path = router.asPath;
-  const query = router.pathname;
+
   function toSlug(category) {
     return category.toLowerCase().replace(/ /g, "-").replace(/\./, "");
   }

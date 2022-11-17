@@ -6,7 +6,7 @@
 @layer base {
   html,
   body {
-    @apply bg-blue-800 text-blue-50;
+    @apply bg-blue-800 text-blue-50 scroll-smooth;
   }
 }
 
@@ -23,9 +23,9 @@
   }
 }
 .navbar-list {
-  @apply relative m-4 flex snap-x snap-mandatory flex-nowrap pr-4 last:mr-4 lg:justify-center;
+  @apply relative m-4 flex snap-x snap-mandatory flex-nowrap scroll-p-4 lg:justify-center;
   li {
-    @apply snap-center pr-4 last:pr-8;
+    @apply snap-center pr-4;
   }
   .current a {
     @apply text-blue-50 ring-2 ring-blue-300;
@@ -36,7 +36,13 @@
 }
 /* Footer */
 .site-footer {
-  @apply bg-blue-800 p-4 text-center text-blue-400;
+  @apply bg-blue-800 pb-4 text-center text-blue-400;
+  nav {
+    @apply flex justify-center space-x-4 mb-2 bg-blue-900;
+  }
+  a {
+    @apply p-2;
+  }
 }
 /* Components */
 .game-list {
@@ -63,7 +69,7 @@
     @apply rounded-md bg-black/10 p-1 text-xs text-white/80;
   }
   .go {
-    @apply grid w-1/4 items-center justify-center bg-blue-500/50 lg:hidden;
+    @apply grid w-20 items-center justify-center bg-blue-600 lg:hidden;
     b {
       @apply block h-10 w-10 bg-arrow bg-center bg-no-repeat;
     }
@@ -79,7 +85,15 @@
   }
 }
 /* Detail */
-
+.description {
+  @apply m-4 overflow-hidden rounded-md bg-blue-600;
+  .t {
+    @apply m-3 border-b border-blue-700 py-2 font-bold uppercase;
+  }
+  .c {
+    @apply relative m-3 h-28 mb-6 after:absolute after:bottom-0 after:left-0 after:h-8 after:w-full after:bg-gradient-to-t after:from-blue-600;
+  }
+}
 /* Banner */
 .banner {
   .t {
