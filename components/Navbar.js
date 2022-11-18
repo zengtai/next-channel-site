@@ -19,24 +19,22 @@ export default function Navbar({ items }) {
   return (
     <nav className={`${isOpen ? "menu-open" : "menu-close"} navbar`}>
       <div className="container">
-        <div>
-          <button onClick={handleClickMenu} className="btn">
-            {isOpen ? `Close` : `Menu`}
-          </button>
-          <ul className="navbar-list">
-            <li className={path === `/` ? `current` : ``}>
-              <Link href={`/`}>Home</Link>
+        <button onClick={handleClickMenu} className="btn">
+          {isOpen ? `Close` : `Menu`}
+        </button>
+        <ul className="navbar-list">
+          <li className={path === `/` ? `current` : ``}>
+            <Link href={`/`}>Home</Link>
+          </li>
+          {items?.map((i) => (
+            <li
+              key={i}
+              className={path === `/category/${toSlug(i)}/` ? `current` : ``}
+            >
+              <Link href={`/category/${toSlug(i)}`}>{i}</Link>
             </li>
-            {items?.map((i) => (
-              <li
-                key={i}
-                className={path === `/category/${toSlug(i)}/` ? `current` : ``}
-              >
-                <Link href={`/category/${toSlug(i)}`}>{i}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+          ))}
+        </ul>
       </div>
     </nav>
   );

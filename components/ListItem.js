@@ -25,6 +25,11 @@ export default function ListItem({ item }) {
             </div>
             <span className="c">{item.category}</span>
           </div>
+          {/* <div className="go">
+            <div className="btn">
+              <span>PLAY</span>
+            </div>
+          </div> */}
           <div className="go">
             <b></b>
           </div>

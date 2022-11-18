@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
-import Banner from "../../components/Banner";
+// import Script from "next/script";
+// import Banner from "../../components/Banner";
 import GameList from "../../components/GameList";
 import Layout from "../../components/Layout";
 import { getData } from "../../lib/api";
@@ -11,7 +11,7 @@ import {
   IMAGE_FORMAT,
   GAME_PATH,
   ADS_SLOT_ID,
-  ADSENSE_ID,
+  // ADSENSE_ID,
   TOP_GAMES,
 } from "../../lib/constants";
 
@@ -22,14 +22,14 @@ export default function GameDetail({ data }) {
       <Head>
         <title>{data.currentGame.title}</title>
       </Head>
-      <Script
+      {/* <Script
         id={`gads-init`}
         async
         src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
         crossOrigin="anonymous"
-      />
+      /> */}
       <Layout navItems={data.categories}>
-        <div className="detail container mx-auto">
+        <div className="detail">
           <div className="game mx-4 flex space-x-4">
             <Image
               className="rounded-xl"

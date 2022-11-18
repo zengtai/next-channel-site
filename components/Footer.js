@@ -7,8 +7,10 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <nav>
-        <Link href={`/t/privacy`}>Privacy Policy</Link>
-        <Link href={`/t/terms`}>Terms of Use</Link>
+        <Link href={`/t/about`}>About</Link>
+        <Link href={`/t/contact`}>Contact</Link>
+        <Link href={`/t/privacy`}>Privacy</Link>
+        <Link href={`/t/terms`}>Terms</Link>
       </nav>
       <Image
         className="h-16 object-contain mx-auto"

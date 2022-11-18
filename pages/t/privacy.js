@@ -1,214 +1,255 @@
+import Head from "next/head";
 import Layout from "../../components/Layout";
 import { getData } from "../../lib/api";
 import { SITE_META } from "../../lib/constants";
 
 export default function Privacy({ data }) {
   return (
-    <Layout navItems={data}>
-      <div className="page container mx-auto">
-        <h1 className="page-title">Privacy Policy</h1>
+    <>
+      <Head>
+        <title>{`Privacy Policy | ${SITE_META.NAME}`}</title>
+      </Head>
+      <Layout navItems={data}>
+        <div className="page container mx-auto">
+          <h1 className="page-title">Privacy Policy</h1>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `
+        <p>Thank you for visiting ${SITE_META.DOMAIN}.</p>
         <p>
-          At {SITE_META.NAME}, accessible from {SITE_META.URL}, one of our main
-          priorities is the privacy of our visitors. This Privacy Policy
-          document contains types of information that is collected and recorded
-          by {SITE_META.NAME} and how we use it.
+          This privacy and security policy (the "Policy") explains the
+          information we collect about you on the Website, as well as
+          information collected when you visit our stores or otherwise
+          communicate or intera ${SITE_META.DOMAIN} pluson Me, how we use the
+          personal data information, some of the security steps taken to protect
+          the information, and the choices you have to review, revise and/or
+          restrict our usage of this information.
         </p>
         <p>
-          If you have additional questions or require more information about our
-          Privacy Policy, do not hesitate to contact us.
+          This Policy is part of the Terms & Conditions of Use that govern the
+          Website and is binding on all Website users.
         </p>
         <p>
-          This Privacy Policy applies only to our online activities and is valid
-          for visitors to our website with regards to the information that they
-          shared and/or collect in {SITE_META.NAME}. This policy is not
-          applicable to any information collected offline or via channels other
-          than this website.
+          If you have any objections to this Privacy Policy, you should
+          immediately discontinue use of the website.
         </p>
-        <h2>Consent</h2>
+        <h2>1. How do we use your personal data?</h2>
         <p>
-          By using our website, you hereby consent to our Privacy Policy and
-          agree to its terms.
+          In providing your personal data you consent to ${SITE_META.DOMAIN} 
+          using the data collected in order to meet our commitments to you and
+          to provide you with the service you expect. We need your personal data
+          for the following purposes:
         </p>
-        <h2>Information we collect</h2>
-        <p>
-          The personal information that you are asked to provide, and the
-          reasons why you are asked to provide it, will be made clear to you at
-          the point we ask you to provide your personal information.
-        </p>
-        <p>
-          If you contact us directly, we may receive additional information
-          about you such as your name, email address, phone number, the contents
-          of the message and/or attachments you may send us, and any other
-          information you may choose to provide.
-        </p>
-        <p>
-          When you register for an Account, we may ask for your contact
-          information, including items such as name, company name, address,
-          email address, and telephone number.
-        </p>
-        <h2>How we use your information</h2>
-        <p>We use the information we collect in various ways, including to:</p>
         <ul>
-          <li>Provide, operate, and maintain our website</li>
-          <li>Improve, personalize, and expand our website</li>
-          <li>Understand and analyze how you use our website</li>
-          <li>Develop new products, services, features, and functionality</li>
           <li>
-            Communicate with you, either directly or through one of our
-            partners, including for customer service, to provide you with
-            updates and other information relating to the website, and for
-            marketing and promotional purposes
+            To create your personal account at ${SITE_META.DOMAIN} (e.g. your
+            name and email address)
           </li>
-          <li>Send you emails</li>
-          <li>Find and prevent fraud</li>
+          <li>
+            To process your orders (e.g. your name, address and bank details)
+          </li>
+          <li>
+            To be able to send text message notifications of delivery status
+            (e.g. your mobile phone number)
+          </li>
+          <li>
+            To be able to send you marketing offers such as newsletters and our
+            catalogues (e.g. your email address, your name)
+          </li>
+          <li>
+            To be able to contact you in the event of any problem with the
+            delivery of your items (e.g. telephone number; address)
+          </li>
+          <li>
+            To enable us to answer your queries and to inform you of new or
+            changed services (e.g. your email address)
+          </li>
         </ul>
-        <h2>Log Files</h2>
         <p>
-          {SITE_META.NAME} follows a standard procedure of using log files.
-          These files log visitors when they visit websites. All hosting
-          companies do this and a part of hosting services’ analytics. The
-          information collected by log files include internet protocol (IP)
-          addresses, browser type, Internet Service Provider (ISP), date and
-          time stamp, referring/exit pages, and possibly the number of clicks.
-          These are not linked to any information that is personally
-          identifiable. The purpose of the information is for analyzing trends,
-          administering the site, tracking users’ movement on the website, and
-          gathering demographic information.
+          We will only keep your data for as long as necessary to carry out our
+          services to you or as long as we are required by law.
         </p>
-        <h2>Cookies and Web Beacons</h2>
         <p>
-          Like any other website, {SITE_META.NAME} uses ‘cookies’. These cookies
-          are used to store information including visitors’ preferences, and the
-          pages on the website that the visitor accessed or visited. The
-          information is used to optimize the users’ experience by customizing
-          our web page content based on visitors’ browser type and/or other
+          We cannot remove your data when there is a legal storage requirement,
+          such as book keeping rules or when there is a legal ground to keep the
+          data, such as an on-going contractual relationship.
+        </p>
+        <p>
+          Non-personal data is used as described above and in other ways as
+          permitted by applicable laws, including combining non-personal data
+          with personal data.
+        </p>
+        <p>
+          In addition, we monitor site use and traffic patterns to improve our
+          web site design and the products and services we offer as well as to
+          determine what offers, promotions or information to send to you.
+        </p>
+        <p>
+          To serve you better; we may combine Personal Information you give us
+          online, via mobile device, in our stores, or through our customer
+          service call center.
+        </p>
+        <p>
+          We may also combine that information with publicly available
+          information and information we receive from cross-reference with
+          select partners and others. By combining this information, we are
+          better able to communicate with you about our products and services,
+          special events and promotions, and better able to personalize your
+          shopping experience.
+        </p>
+
+        <h2>
+          2. You have the right to request information about the personal data
+          we hold on you.
+        </h2>
+        <p>
+          If your data is incorrect, incomplete or irrelevant you can ask to
+          have the information corrected or removed. Annually, you also have the
+          right to request written documentation, free of charge, on the
+          personal information we have on you on our account files.
+        </p>
+        <p>
+          To request this document please write in to ${SITE_META.DOMAIN} 
+          Customer Service. You can withdraw your consent to us using the data
+          for marketing purposes at any time (i.e., sending catalogues.
+          Newsletters or offers). You can contact us by telephone or by e-mail.
+        </p>
+
+        <h2>
+          3. You can access your personal account to update your personal data.
+        </h2>
+        <p>
+          Please note, however, that your personal account information is
+          protected by your user name and password.
+        </p>
+        <p>
+          It is your responsibility to maintain the security of your username
+          and password as any actions taken while logged into your account will
+          be your responsibility.
+        </p>
+        <h2>4. We do not sell your information to third parties.</h2>
+        <p>
+          We do, however, share data with third parties when necessary to
+          fulfill a transaction, complete a service, for administrative
+          purposes, or when required by law. ${SITE_META.DOMAIN} is a public
+          forum where everyone can post their collaboration information and
+          contacts and personal information. The information you posted means
+          you agree to reveal your information to public users on this website.
+          You have got the choice to publish your contact information to
+          herasboxy's registered account.
+        </p>
+        <p>
+          Any data that is forwarded to third parties is used to meet
+          ${SITE_META.DOMAIN}'s commitments to ${SITE_META.DOMAIN}
+        </p>
+        <p>
+          Additionally, we will share your data if such sharing is required by
+          law or to protect against potential or suspected fraud. Also,
+          ${SITE_META.DOMAIN}usMe undergoes a merger, corporate reorganization,
+          or all or part of our assets are sold or acquired by another party,
+          your personal data may be shared. If you do not want us to share your
+          personal data in these manners, please do not provide it to us.
+        </p>
+        <h2>5. Cookie.</h2>
+        <p>
+          A cookie is a piece of data stored on the user's hard drive containing
+          information about the user We use both session and persistent cookies.
+          Cookies enable us to track and target the interests of our users in
+          the aggregate by analyzing popular areas and products to enhance
+          future experiences on our site.
+        </p>
+        <p>
+          Cookies do not cause damage to your computer systems or files, and
+          only the web site that transferred a particular cookie to you can
+          read, modify or delete such cookie.
+        </p>
+        <p>
+          If you do not want information collected through the use of cookies,
+          there are simple procedures in most browsers that allow you to delete
+          existing cookies, to automatically decline cookies, or to be given the
+          choice of declining or accepting the transfer of particular cookies to
+          your computer.
+        </p>
+        <p>
+          You can easily erase cookies from your computer or mobile device using
+          your browser. For instructions on how to handle and delete cookies
+          please look under "Help" in your browser.
+        </p>
+        <p>
+          You can choose to disable cookies, or to receive a notification each
+          time a new cookie is sent to your computer or mobile device. However,
+          please note that if you choose to disable cookies, you will not be
+          able to take advantage of all features.
+        </p>
+        <h2>6. Security.</h2>
+        <p>
+          ${SITE_META.DOMAIN} takes every precaution to protect our user's
           information.
         </p>
         <p>
-          For more general information on cookies, please read{" "}
-          <a href="https://www.privacypolicyonline.com/what-are-cookies/">
-            “What Are Cookies”
-          </a>
-          .
-        </p>
-        <h2>Google DoubleClick DART Cookie</h2>
-        <p>
-          Google is one of a third-party vendor on our site. It also uses
-          cookies, known as DART cookies, to serve ads to our site visitors
-          based upon their visit to www.website.com and other sites on the
-          internet. However, visitors may choose to decline the use of DART
-          cookies by visiting the Google ad and content network Privacy Policy
-          at the following URL –{" "}
-          <a href="https://policies.google.com/technologies/ads">
-            https://policies.google.com/technologies/ads
-          </a>
-        </p>
-        <h2>Advertising Partners Privacy Policies</h2>
-        <p>
-          You may consult this list to find the Privacy Policy for each of the
-          advertising partners of {SITE_META.NAME}.
+          When our registration/order form asks users to enter sensitive
+          information (such as credit card number and/or social security
+          number), that information is encrypted and is protected with the
+          Secure Socket Layers (SSLs) encryption software. While on a secure
+          page, such as our order form, a lock icon appears on the bottom of
+          your Web browser.
         </p>
         <p>
-          Third-party ad servers or ad networks uses technologies like cookies,
-          JavaScript, or Web Beacons that are used in their respective
-          advertisements and links that appear on {SITE_META.NAME}, which are
-          sent directly to users’ browser. They automatically receive your IP
-          address when this occurs. These technologies are used to measure the
-          effectiveness of their advertising campaigns and/or to personalize the
-          advertising content that you see on websites that you visit.
+          When you are not on a secure page, no lock icon will appear In
+          addition, the servers that we store personally identifiable
+          information on are kept in a secure environment under restricted
+          access. However, security systems are not infallible, including
+          encryption systems.
         </p>
         <p>
-          Note that {SITE_META.NAME} has no access to or control over these
-          cookies that are used by third-party advertisers.
-        </p>
-        <h2>Third Party Privacy Policies</h2>
-        <p>
-          {SITE_META.NAME}’s Privacy Policy does not apply to other advertisers
-          or websites. Thus, we are advising you to consult the respective
-          Privacy Policies of these third-party ad servers for more detailed
-          information. It may include their practices and instructions about how
-          to opt-out of certain options.
+          While we use reasonable efforts to protect your personal information,
+          we cannot guarantee its absolute security.
         </p>
         <p>
-          You can choose to disable cookies through your individual browser
-          options. To know more detailed information about cookie management
-          with specific web browsers, it can be found at the browsers’
-          respective websites.
+          If you have any questions about the security at our website, please
+          send us an e-mail at service@${SITE_META.DOMAIN} for more info.
         </p>
-        <h2>CCPA Privacy Rights (Do Not Sell My Personal Information)</h2>
+        <h2>7. Supplementation of Information.</h2>
         <p>
-          Under the CCPA, among other rights, California consumers have the
-          right to:
-        </p>
-        <p>
-          Request that a business that collects a consumer’s personal data
-          disclose the categories and specific pieces of personal data that a
-          business has collected about consumers.
+          In order for ${SITE_META.DOMAIN} to property fullfil its obligation to
+          our customers, it is necessary for us to supplement the information we
+          receive with information from third party sources such as our
+          affiliated websites.
         </p>
         <p>
-          Request that a business delete any personal data about the consumer
-          that a business has collected.
+          For example, we will combine information about the purchasing habits
+          of users with similar information from our affiliated sites.
         </p>
         <p>
-          Request that a business that sells a consumer’s personal data, not
-          sell the consumer’s personal data.
+          When a user makes a purchase from any of these companies, the
+          companies collect and share that purchase information with us so we
+          can tailor the site to our users' preferences.
         </p>
         <p>
-          If you make a request, we have one month to respond to you. If you
-          would like to exercise any of these rights, please contact us.
-        </p>
-        <h2>GDPR Data Protection Rights</h2>
-        <p>
-          We would like to make sure you are fully aware of all of your data
-          protection rights. Every user is entitled to the following:
-        </p>
-        <p>
-          The right to access – You have the right to request copies of your
-          personal data. We may charge you a small fee for this service.
+          If a user's personally identifiable information changes (such as your
+          zip code, phone, e-mail or postal address), or if a user no longer
+          desires our service, we provide a way to correct, update or
+          delete/deactivate that user's personally identifiable information
+          provided to us. This can be done by using the unsubscribe feature in
+          our communication.
         </p>
         <p>
-          The right to rectification – You have the right to request that we
-          correct any information you believe is inaccurate. You also have the
-          right to request that we complete the information you believe is
-          incomplete.
-        </p>
-        <p>
-          The right to erasure – You have the right to request that we erase
-          your personal data, under certain conditions.
-        </p>
-        <p>
-          The right to restrict processing – You have the right to request that
-          we restrict the processing of your personal data, under certain
-          conditions.
-        </p>
-        <p>
-          The right to object to processing – You have the right to object to
-          our processing of your personal data, under certain conditions.
-        </p>
-        <p>
-          The right to data portability – You have the right to request that we
-          transfer the data that we have collected to another organization, or
-          directly to you, under certain conditions.
-        </p>
-        <p>
-          If you make a request, we have one month to respond to you. If you
-          would like to exercise any of these rights, please contact us.
-        </p>
-        <h2>Children’s Information</h2>
-        <p>
-          Another part of our priority is adding protection for children while
-          using the internet. We encourage parents and guardians to observe,
-          participate in, and/or monitor and guide their online activity.
-        </p>
-        <p>
-          {SITE_META.NAME} does not knowingly collect any Personal Identifiable
-          Information from children under the age of 13. If you think that your
-          child provided this kind of information on our website, we strongly
-          encourage you to contact us immediately and we will do our best
-          efforts to promptly remove such information from our records.
-        </p>
-      </div>
-    </Layout>
+          Changes to This Policy, We reserve the right to change this privacy
+          policy, and any of our policies or procedures concerning the treatment
+          of information collected through the site, without prior notice. You
+          can determine when this privacy policy was last revised by referring
+          to date at the top of this page. Any changes to our privacy policy
+          will become effective upon posting of the revised policy on the
+          Internet, accessible through the site. Use of the site following such
+          changes constitutes your acceptance of the revised policy then in
+          effect. We encourage you to periodically review our privacy policy to
+          ensure familiarity with our most current version.
+        </p>`,
+            }}
+          />
+        </div>
+      </Layout>
+    </>
   );
 }
 
