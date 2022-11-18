@@ -26,8 +26,15 @@ export default function Home({ data }) {
 
       <Layout navItems={data.categories}>
         <div className="home container mx-auto">
-          <Banner slot={ADS_SLOT_ID.HOME} auto key={Math.random()} />
-          <h2 className="sr-only">All Games</h2>
+          {/* <Banner slot={ADS_SLOT_ID.HOME} auto key={Math.random()} /> */}
+          <header className="page-title">
+            <h1
+              dangerouslySetInnerHTML={{
+                __html: `All Games`,
+              }}
+            />
+            <span>{`Total: ${data.games.length}`}</span>
+          </header>
           <GameList
             items={data.games}
             slot={ADS_SLOT_ID.HOME}

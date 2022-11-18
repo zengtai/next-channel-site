@@ -17,18 +17,30 @@
 
 /* Navbar */
 .navbar {
-  @apply fixed top-0 left-0 z-10 w-full bg-blue-700 shadow-lg after:absolute after:right-0 after:top-0 after:z-0 after:h-full after:w-8 after:bg-gradient-to-l after:from-blue-700;
+  @apply fixed top-0 z-10 xl:w-full inset-y-0 xl:inset-y-auto w-48 xl:bg-blue-700 bg-blue-800 shadow-lg right-0 xl:right-auto transform duration-300 ease-out border-l-4 border-l-lime-500 xl:border-none;
+  /* @apply after:absolute after:right-0 after:top-0 after:z-0 after:h-full after:w-8 after:bg-gradient-to-l after:from-blue-700; */
   .container {
-    @apply mx-auto overflow-x-auto;
+    @apply mx-auto overflow-y-auto;
+  }
+  .btn {
+    @apply xl:hidden ring-4 -left-4 uppercase -translate-x-full w-20 h-20 absolute bottom-6 z-20 rounded-full shadow-lg;
   }
 }
+
+.menu-close {
+  @apply -right-48 xl:right-auto;
+}
+.menu-open .btn {
+  @apply bg-white text-pink-600;
+}
+.menu-close .btn {
+  @apply bg-lime-500 text-white;
+}
+
 .navbar-list {
-  @apply relative m-4 flex snap-x snap-mandatory flex-nowrap scroll-p-4 lg:justify-center;
-  li {
-    @apply snap-center pr-4;
-  }
+  @apply relative m-4 flex snap-x snap-mandatory flex-nowrap xl:space-x-4 scroll-p-4 lg:justify-center xl:flex-row flex-col space-y-3 xl:space-y-0;
   .current a {
-    @apply text-blue-50 ring-2 ring-blue-300;
+    @apply text-white ring-2 ring-lime-300;
   }
 }
 .navbar-list a {
@@ -91,9 +103,35 @@
     @apply m-3 border-b border-blue-700 py-2 font-bold uppercase;
   }
   .c {
-    @apply relative m-3 h-28 mb-6 after:absolute after:bottom-0 after:left-0 after:h-8 after:w-full after:bg-gradient-to-t after:from-blue-600;
+    @apply relative m-3 mb-6;
+    /* @apply after:absolute after:bottom-0 after:left-0 after:h-8 after:w-full after:bg-gradient-to-t after:from-blue-600; */
   }
 }
+
+.play-btn {
+  @apply m-4 block rounded-lg border-b-4 border-lime-600 bg-lime-500 py-3 text-center text-xl font-bold text-white;
+}
+
+/* Page */
+.page {
+  h1 {
+    @apply m-4 text-xl;
+  }
+  h2 {
+    @apply m-4 text-lg;
+  }
+  p,
+  ul {
+    @apply mx-4 my-2;
+  }
+  li {
+    @apply list-disc list-item;
+  }
+  a {
+    @apply underline;
+  }
+}
+
 /* Banner */
 .banner {
   .t {

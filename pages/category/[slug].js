@@ -25,7 +25,7 @@ export default function Category({ data }) {
 
       <Layout navItems={data.categories}>
         <div className="category container mx-auto">
-          <Banner slot={ADS_SLOT_ID.CATEGORY} auto key={Math.random()} />
+          {/* <Banner slot={ADS_SLOT_ID.CATEGORY} auto key={Math.random()} /> */}
           <header className="page-title">
             <h1
               dangerouslySetInnerHTML={{

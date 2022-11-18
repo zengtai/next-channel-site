@@ -10,7 +10,11 @@ export default function Footer() {
         <Link href={`/t/privacy`}>Privacy Policy</Link>
         <Link href={`/t/terms`}>Terms of Use</Link>
       </nav>
-      <Image className="h-16 object-contain" src={Logo} alt={SITE_META.NAME} />
+      <Image
+        className="h-16 object-contain mx-auto"
+        src={Logo}
+        alt={SITE_META.NAME}
+      />
       <p
         className="container mx-auto text-sm"
         dangerouslySetInnerHTML={{

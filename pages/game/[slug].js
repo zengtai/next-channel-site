@@ -61,10 +61,10 @@ export default function GameDetail({ data }) {
               </div>
             </div>
           </div>
-          <Banner slot={ADS_SLOT_ID.DETAIL} auto />
+          {/* <Banner slot={ADS_SLOT_ID.DETAIL} auto /> */}
           <div>
             <Link
-              className="m-4 block rounded-lg border-b-4 border-lime-600 bg-lime-500 py-3 text-center text-xl font-bold text-white"
+              className="play-btn"
               href={GAME_PATH + data.currentGame.appid}
             >
               Play Now
