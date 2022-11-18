@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://jojogames.top
+
+# Sitemaps
+Sitemap: https://jojogames.top/sitemap.xml

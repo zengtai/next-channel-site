@@ -6,10 +6,11 @@ import { getData } from "../../lib/api";
 import {
   SITE_META,
   ADS_SLOT_ID,
-  ADSENSE_ID,
+  // ADSENSE_ID,
   TOP_GAMES,
 } from "../../lib/constants";
-import Script from "next/script";
+
+import AdsScript from "../../components/AdsScript";
 
 export default function Category({ data }) {
   // console.log(`data: `, data);
@@ -18,13 +19,7 @@ export default function Category({ data }) {
       <Head>
         <title>{`${data.games[0].category} Games | ${SITE_META.NAME}`}</title>
       </Head>
-      <Script
-        id={`gads-init`}
-        strategy={`beforeInteractive`}
-        async
-        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
-        crossOrigin="anonymous"
-      />
+      <AdsScript />
 
       <Layout navItems={data.categories}>
         <div className="category">
