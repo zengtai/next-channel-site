@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 // import Banner from "../components/Banner";
 import GameList from "../components/GameList";
 import Layout from "../components/Layout";
@@ -6,7 +7,7 @@ import { getData } from "../lib/api";
 import {
   SITE_META,
   ADS_SLOT_ID,
-  // ADSENSE_ID,
+  ADSENSE_ID,
   TOP_GAMES,
 } from "../lib/constants";
 
@@ -17,13 +18,14 @@ export default function Home({ data }) {
     <>
       <Head>
         <title>{`Home | ${SITE_META.NAME}`}</title>
-        {/* <script
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
-          crossOrigin="anonymous"
-        /> */}
       </Head>
-
+      <Script
+        id={`gads-init`}
+        strategy={`beforeInteractive`}
+        async
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
+        crossOrigin="anonymous"
+      />
       <Layout navItems={data.categories}>
         <div className="home">
           {/* <Banner slot={ADS_SLOT_ID.HOME} auto key={Math.random()} /> */}
