@@ -11,6 +11,9 @@ import {
   TOP_GAMES,
 } from "../lib/constants";
 
+import Image from "next/image";
+import Logo from "../public/images/brand/jojogames-logo.png";
+
 export default function Home({ data }) {
   // console.log(`data: `, data.games);
   // console.log(`data: `, data.games.length);
@@ -25,12 +28,17 @@ export default function Home({ data }) {
         <div className="home">
           {/* <Banner slot={ADS_SLOT_ID.HOME} auto key={Math.random()} /> */}
           <header className="page-title">
-            <h1
+            <Image
+              className="h-20 object-contain mx-auto"
+              src={Logo}
+              alt={SITE_META.NAME}
+            />
+            {/* <h1
               dangerouslySetInnerHTML={{
                 __html: `All Games`,
               }}
             />
-            <span>{`Total: ${data.games.length}`}</span>
+            <span>{`Total: ${data.games.length}`}</span> */}
           </header>
           <GameList
             items={data.games}
