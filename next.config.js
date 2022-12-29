@@ -12,7 +12,7 @@ const nextConfig = {
   trailingSlash: true,
   generateBuildId: async () => {
     // You can, for example, get the latest git commit hash here
-    return "20221118";
+    return "20221228";
   },
 };
 
